@@ -1,9 +1,17 @@
+:root{
+    --color-background:rgb(237, 237, 237);
+    --card-color:rgb(56, 56, 56);
+
+}
+
 body{
     margin:0px;
     padding:0px;
-    background-color: rgb(219, 234, 255);
+    background-color: var(--color-background)
     
 }
+
+
 
 ul,li{
     list-style: none;
@@ -80,7 +88,7 @@ img{
 .search>input{
     flex:1;
     height: 30px;
-    background-color:rgb(219, 234, 255);
+    background-color:var(--color-background);
     border:5px solid rgb(0 0 0 / 0);
     border-radius: 30px;
     outline-color:rgb(0, 102, 255) ;
@@ -154,11 +162,57 @@ img{
 }
 
 
+/* content area */
 
-.sidebarRight{
-    grid-column: 3 / 4;
-}
+
 
 .contentContainer{
     grid-column: 2/3;
+    padding: 20px;
+}
+
+.contentContainer>.mess{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+.contentContainer>.cardContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+    margin:15px;
+}
+
+.cardContainer>.card{
+    background-color: white;
+    border:5px solid white;
+    border-radius: 10px;
+    border-left-width: 8px;
+    border-left-color: orange;
+    padding: 10px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.card>.projectName{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.card>.text{
+    color: var(--card-color);
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.card>.endTags{
+    justify-self: end;
+    align-self: end;
+
+}
+
+.sidebarRight{
+    grid-column: 3 / 4;
 }
