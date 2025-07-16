@@ -33,14 +33,14 @@ img{
     grid-row: 1 / 3;
     background-color: rgb(5, 138, 255);
 
+
 }
 .sidebarleft>ul{
-    align-self: center;
-    justify-self: center;
     display: grid;
     grid-template-columns: 1fr;
     align-content: space-evenly;
     gap:30px;
+    padding-left: 25px;
 
 }
 
